@@ -1,0 +1,627 @@
+SQL> SELECT employee_id AS "Emp #",
+  2         last_name AS "Employee",
+  3         job_id AS "Job",
+  4         hire_date AS "Hire Date"
+  5  FROM employees;
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       199 Grant                     SH_CLERK   13-JAN-18
+       200 Whalen                    AD_ASST    17-SEP-13
+       201 Martinez                  MK_MAN     17-FEB-14
+       202 Davis                     MK_REP     17-AUG-15
+       203 Jacobs                    HR_REP     07-JUN-12
+       204 Brown                     PR_REP     07-JUN-12
+       205 Higgins                   AC_MGR     07-JUN-12
+       206 Gietz                     AC_ACCOUNT 07-JUN-12
+       100 King                      AD_PRES    17-JUN-13
+       101 Yang                      AD_VP      21-SEP-15
+       102 Garcia                    AD_VP      13-JAN-11
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       103 James                     IT_PROG    03-JAN-16
+       104 Miller                    IT_PROG    21-MAY-17
+       105 Williams                  IT_PROG    25-JUN-15
+       106 Jackson                   IT_PROG    05-FEB-16
+       107 Nguyen                    IT_PROG    07-FEB-17
+       108 Gruenberg                 FI_MGR     17-AUG-12
+       109 Faviet                    FI_ACCOUNT 16-AUG-12
+       110 Chen                      FI_ACCOUNT 28-SEP-15
+       111 Sciarra                   FI_ACCOUNT 30-SEP-15
+       112 Urman                     FI_ACCOUNT 07-MAR-16
+       113 Popp                      FI_ACCOUNT 07-DEC-17
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       114 Li                        PU_MAN     07-DEC-12
+       115 Khoo                      PU_CLERK   18-MAY-13
+       116 Baida                     PU_CLERK   24-DEC-15
+       117 Tobias                    PU_CLERK   24-JUL-15
+       118 Himuro                    PU_CLERK   15-NOV-16
+       119 Colmenares                PU_CLERK   10-AUG-17
+       120 Weiss                     ST_MAN     18-JUL-14
+       121 Fripp                     ST_MAN     10-APR-15
+       122 Kaufling                  ST_MAN     01-MAY-13
+       123 Vollman                   ST_MAN     10-OCT-15
+       124 Mourgos                   ST_MAN     16-NOV-17
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       125 Nayer                     ST_CLERK   16-JUL-15
+       126 Mikkilineni               ST_CLERK   28-SEP-16
+       127 Landry                    ST_CLERK   14-JAN-17
+       128 Markle                    ST_CLERK   08-MAR-18
+       129 Bissot                    ST_CLERK   20-AUG-15
+       130 Atkinson                  ST_CLERK   30-OCT-15
+       131 Marlow                    ST_CLERK   16-FEB-15
+       132 Olson                     ST_CLERK   10-APR-17
+       133 Mallin                    ST_CLERK   14-JUN-14
+       134 Rogers                    ST_CLERK   26-AUG-16
+       135 Gee                       ST_CLERK   12-DEC-17
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       136 Philtanker                ST_CLERK   06-FEB-18
+       137 Ladwig                    ST_CLERK   14-JUL-13
+       138 Stiles                    ST_CLERK   26-OCT-15
+       139 Seo                       ST_CLERK   12-FEB-16
+       140 Patel                     ST_CLERK   06-APR-16
+       141 Rajs                      ST_CLERK   17-OCT-13
+       142 Davies                    ST_CLERK   29-JAN-15
+       143 Matos                     ST_CLERK   15-MAR-16
+       144 Vargas                    ST_CLERK   09-JUL-16
+       145 Singh                     SA_MAN     01-OCT-14
+       146 Partners                  SA_MAN     05-JAN-15
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       147 Errazuriz                 SA_MAN     10-MAR-15
+       148 Cambrault                 SA_MAN     15-OCT-17
+       149 Zlotkey                   SA_MAN     29-JAN-18
+       150 Tucker                    SA_REP     30-JAN-15
+       151 Bernstein                 SA_REP     24-MAR-15
+       152 Hall                      SA_REP     20-AUG-15
+       153 Olsen                     SA_REP     30-MAR-16
+       154 Cambrault                 SA_REP     09-DEC-16
+       155 Tuvault                   SA_REP     23-NOV-17
+       156 King                      SA_REP     30-JAN-14
+       157 Sully                     SA_REP     04-MAR-14
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       158 McEwen                    SA_REP     01-AUG-14
+       159 Smith                     SA_REP     10-MAR-15
+       160 Doran                     SA_REP     15-DEC-15
+       161 Sewall                    SA_REP     03-NOV-16
+       162 Vishney                   SA_REP     11-NOV-15
+       163 Greene                    SA_REP     19-MAR-17
+       164 Marvins                   SA_REP     24-JAN-18
+       165 Lee                       SA_REP     23-FEB-18
+       166 Ande                      SA_REP     24-MAR-18
+       167 Banda                     SA_REP     21-APR-18
+       168 Ozer                      SA_REP     11-MAR-15
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       169 Bloom                     SA_REP     23-MAR-16
+       170 Fox                       SA_REP     24-JAN-16
+       171 Smith                     SA_REP     23-FEB-17
+       172 Bates                     SA_REP     24-MAR-17
+       173 Kumar                     SA_REP     21-APR-18
+       174 Abel                      SA_REP     11-MAY-14
+       175 Hutton                    SA_REP     19-MAR-15
+       176 Taylor                    SA_REP     24-MAR-16
+       177 Livingston                SA_REP     23-APR-16
+       178 Grant                     SA_REP     24-MAY-17
+       179 Johnson                   SA_REP     04-JAN-18
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       180 Taylor                    SH_CLERK   24-JAN-16
+       181 Fleaur                    SH_CLERK   23-FEB-16
+       182 Sullivan                  SH_CLERK   21-JUN-17
+       183 Geoni                     SH_CLERK   03-FEB-18
+       184 Sarchand                  SH_CLERK   27-JAN-14
+       185 Bull                      SH_CLERK   20-FEB-15
+       186 Dellinger                 SH_CLERK   24-JUN-16
+       187 Cabrio                    SH_CLERK   07-FEB-17
+       188 Chung                     SH_CLERK   14-JUN-15
+       189 Dilly                     SH_CLERK   13-AUG-15
+       190 Venzl                     SH_CLERK   11-JUL-16
+
+     Emp # Employee                  Job        Hire Date
+---------- ------------------------- ---------- ---------
+       191 Perkins                   SH_CLERK   19-DEC-17
+       192 Bell                      SH_CLERK   04-FEB-14
+       193 Everett                   SH_CLERK   03-MAR-15
+       194 McLeod                    SH_CLERK   01-JUL-16
+       195 Jones                     SH_CLERK   17-MAR-17
+       196 Walsh                     SH_CLERK   24-APR-16
+       197 Feeney                    SH_CLERK   23-MAY-16
+       198 OConnell                  SH_CLERK   21-JUN-17
+
+107 rows selected.
+
+SQL> SELECT last_name || ', ' || job_id AS "Employee and Title"
+  2  FROM employees;
+
+Employee and Title
+-------------------------------------
+Abel, SA_REP
+Ande, SA_REP
+Atkinson, ST_CLERK
+Baida, PU_CLERK
+Banda, SA_REP
+Bates, SA_REP
+Bell, SH_CLERK
+Bernstein, SA_REP
+Bissot, ST_CLERK
+Bloom, SA_REP
+Brown, PR_REP
+
+Employee and Title
+-------------------------------------
+Bull, SH_CLERK
+Cabrio, SH_CLERK
+Cambrault, SA_MAN
+Cambrault, SA_REP
+Chen, FI_ACCOUNT
+Chung, SH_CLERK
+Colmenares, PU_CLERK
+Davies, ST_CLERK
+Davis, MK_REP
+Dellinger, SH_CLERK
+Dilly, SH_CLERK
+
+Employee and Title
+-------------------------------------
+Doran, SA_REP
+Errazuriz, SA_MAN
+Everett, SH_CLERK
+Faviet, FI_ACCOUNT
+Feeney, SH_CLERK
+Fleaur, SH_CLERK
+Fox, SA_REP
+Fripp, ST_MAN
+Garcia, AD_VP
+Gee, ST_CLERK
+Geoni, SH_CLERK
+
+Employee and Title
+-------------------------------------
+Gietz, AC_ACCOUNT
+Grant, SH_CLERK
+Grant, SA_REP
+Greene, SA_REP
+Gruenberg, FI_MGR
+Hall, SA_REP
+Higgins, AC_MGR
+Himuro, PU_CLERK
+Hutton, SA_REP
+Jackson, IT_PROG
+Jacobs, HR_REP
+
+Employee and Title
+-------------------------------------
+James, IT_PROG
+Johnson, SA_REP
+Jones, SH_CLERK
+Kaufling, ST_MAN
+Khoo, PU_CLERK
+King, SA_REP
+King, AD_PRES
+Kumar, SA_REP
+Ladwig, ST_CLERK
+Landry, ST_CLERK
+Lee, SA_REP
+
+Employee and Title
+-------------------------------------
+Li, PU_MAN
+Livingston, SA_REP
+Mallin, ST_CLERK
+Markle, ST_CLERK
+Marlow, ST_CLERK
+Martinez, MK_MAN
+Marvins, SA_REP
+Matos, ST_CLERK
+McEwen, SA_REP
+McLeod, SH_CLERK
+Mikkilineni, ST_CLERK
+
+Employee and Title
+-------------------------------------
+Miller, IT_PROG
+Mourgos, ST_MAN
+Nayer, ST_CLERK
+Nguyen, IT_PROG
+OConnell, SH_CLERK
+Olsen, SA_REP
+Olson, ST_CLERK
+Ozer, SA_REP
+Partners, SA_MAN
+Patel, ST_CLERK
+Perkins, SH_CLERK
+
+Employee and Title
+-------------------------------------
+Philtanker, ST_CLERK
+Popp, FI_ACCOUNT
+Rajs, ST_CLERK
+Rogers, ST_CLERK
+Sarchand, SH_CLERK
+Sciarra, FI_ACCOUNT
+Seo, ST_CLERK
+Sewall, SA_REP
+Singh, SA_MAN
+Smith, SA_REP
+Smith, SA_REP
+
+Employee and Title
+-------------------------------------
+Stiles, ST_CLERK
+Sullivan, SH_CLERK
+Sully, SA_REP
+Taylor, SA_REP
+Taylor, SH_CLERK
+Tobias, PU_CLERK
+Tucker, SA_REP
+Tuvault, SA_REP
+Urman, FI_ACCOUNT
+Vargas, ST_CLERK
+Venzl, SH_CLERK
+
+Employee and Title
+-------------------------------------
+Vishney, SA_REP
+Vollman, ST_MAN
+Walsh, SH_CLERK
+Weiss, ST_MAN
+Whalen, AD_ASST
+Williams, IT_PROG
+Yang, AD_VP
+Zlotkey, SA_MAN
+
+107 rows selected.
+
+SQL> SELECT first_name || ' ' || last_name || ',' ||
+  2         job_id || ',' ||
+  3         hire_date || ',' ||
+  4         manager_id AS "THE_OUTPUT"
+  5  FROM employees;
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Douglas Grant,SH_CLERK,13-JAN-18,124
+Jennifer Whalen,AD_ASST,17-SEP-13,101
+Michael Martinez,MK_MAN,17-FEB-14,100
+Pat Davis,MK_REP,17-AUG-15,201
+Susan Jacobs,HR_REP,07-JUN-12,101
+Hermann Brown,PR_REP,07-JUN-12,101
+Shelley Higgins,AC_MGR,07-JUN-12,101
+William Gietz,AC_ACCOUNT,07-JUN-12,205
+Steven King,AD_PRES,17-JUN-13,
+Neena Yang,AD_VP,21-SEP-15,100
+Lex Garcia,AD_VP,13-JAN-11,100
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Alexander James,IT_PROG,03-JAN-16,102
+Bruce Miller,IT_PROG,21-MAY-17,103
+David Williams,IT_PROG,25-JUN-15,103
+Valli Jackson,IT_PROG,05-FEB-16,103
+Diana Nguyen,IT_PROG,07-FEB-17,103
+Nancy Gruenberg,FI_MGR,17-AUG-12,101
+Daniel Faviet,FI_ACCOUNT,16-AUG-12,108
+John Chen,FI_ACCOUNT,28-SEP-15,108
+Ismael Sciarra,FI_ACCOUNT,30-SEP-15,108
+Jose Manuel Urman,FI_ACCOUNT,07-MAR-16,108
+Luis Popp,FI_ACCOUNT,07-DEC-17,108
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Den Li,PU_MAN,07-DEC-12,100
+Alexander Khoo,PU_CLERK,18-MAY-13,114
+Shelli Baida,PU_CLERK,24-DEC-15,114
+Sigal Tobias,PU_CLERK,24-JUL-15,114
+Guy Himuro,PU_CLERK,15-NOV-16,114
+Karen Colmenares,PU_CLERK,10-AUG-17,114
+Matthew Weiss,ST_MAN,18-JUL-14,100
+Adam Fripp,ST_MAN,10-APR-15,100
+Payam Kaufling,ST_MAN,01-MAY-13,100
+Shanta Vollman,ST_MAN,10-OCT-15,100
+Kevin Mourgos,ST_MAN,16-NOV-17,100
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Julia Nayer,ST_CLERK,16-JUL-15,120
+Irene Mikkilineni,ST_CLERK,28-SEP-16,120
+James Landry,ST_CLERK,14-JAN-17,120
+Steven Markle,ST_CLERK,08-MAR-18,120
+Laura Bissot,ST_CLERK,20-AUG-15,121
+Mozhe Atkinson,ST_CLERK,30-OCT-15,121
+James Marlow,ST_CLERK,16-FEB-15,121
+TJ Olson,ST_CLERK,10-APR-17,121
+Jason Mallin,ST_CLERK,14-JUN-14,122
+Michael Rogers,ST_CLERK,26-AUG-16,122
+Ki Gee,ST_CLERK,12-DEC-17,122
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Hazel Philtanker,ST_CLERK,06-FEB-18,122
+Renske Ladwig,ST_CLERK,14-JUL-13,123
+Stephen Stiles,ST_CLERK,26-OCT-15,123
+John Seo,ST_CLERK,12-FEB-16,123
+Joshua Patel,ST_CLERK,06-APR-16,123
+Trenna Rajs,ST_CLERK,17-OCT-13,124
+Curtis Davies,ST_CLERK,29-JAN-15,124
+Randall Matos,ST_CLERK,15-MAR-16,124
+Peter Vargas,ST_CLERK,09-JUL-16,124
+John Singh,SA_MAN,01-OCT-14,100
+Karen Partners,SA_MAN,05-JAN-15,100
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Alberto Errazuriz,SA_MAN,10-MAR-15,100
+Gerald Cambrault,SA_MAN,15-OCT-17,100
+Eleni Zlotkey,SA_MAN,29-JAN-18,100
+Sean Tucker,SA_REP,30-JAN-15,145
+David Bernstein,SA_REP,24-MAR-15,145
+Peter Hall,SA_REP,20-AUG-15,145
+Christopher Olsen,SA_REP,30-MAR-16,145
+Nanette Cambrault,SA_REP,09-DEC-16,145
+Oliver Tuvault,SA_REP,23-NOV-17,145
+Janette King,SA_REP,30-JAN-14,146
+Patrick Sully,SA_REP,04-MAR-14,146
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Allan McEwen,SA_REP,01-AUG-14,146
+Lindsey Smith,SA_REP,10-MAR-15,146
+Louise Doran,SA_REP,15-DEC-15,146
+Sarath Sewall,SA_REP,03-NOV-16,146
+Clara Vishney,SA_REP,11-NOV-15,147
+Danielle Greene,SA_REP,19-MAR-17,147
+Mattea Marvins,SA_REP,24-JAN-18,147
+David Lee,SA_REP,23-FEB-18,147
+Sundar Ande,SA_REP,24-MAR-18,147
+Amit Banda,SA_REP,21-APR-18,147
+Lisa Ozer,SA_REP,11-MAR-15,148
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Harrison Bloom,SA_REP,23-MAR-16,148
+Tayler Fox,SA_REP,24-JAN-16,148
+William Smith,SA_REP,23-FEB-17,148
+Elizabeth Bates,SA_REP,24-MAR-17,148
+Sundita Kumar,SA_REP,21-APR-18,148
+Ellen Abel,SA_REP,11-MAY-14,149
+Alyssa Hutton,SA_REP,19-MAR-15,149
+Jonathon Taylor,SA_REP,24-MAR-16,149
+Jack Livingston,SA_REP,23-APR-16,149
+Kimberely Grant,SA_REP,24-MAY-17,149
+Charles Johnson,SA_REP,04-JAN-18,149
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Winston Taylor,SH_CLERK,24-JAN-16,120
+Jean Fleaur,SH_CLERK,23-FEB-16,120
+Martha Sullivan,SH_CLERK,21-JUN-17,120
+Girard Geoni,SH_CLERK,03-FEB-18,120
+Nandita Sarchand,SH_CLERK,27-JAN-14,121
+Alexis Bull,SH_CLERK,20-FEB-15,121
+Julia Dellinger,SH_CLERK,24-JUN-16,121
+Anthony Cabrio,SH_CLERK,07-FEB-17,121
+Kelly Chung,SH_CLERK,14-JUN-15,122
+Jennifer Dilly,SH_CLERK,13-AUG-15,122
+Timothy Venzl,SH_CLERK,11-JUL-16,122
+
+THE_OUTPUT
+--------------------------------------------------------------------------------
+Randall Perkins,SH_CLERK,19-DEC-17,122
+Sarah Bell,SH_CLERK,04-FEB-14,123
+Britney Everett,SH_CLERK,03-MAR-15,123
+Samuel McLeod,SH_CLERK,01-JUL-16,123
+Vance Jones,SH_CLERK,17-MAR-17,123
+Alana Walsh,SH_CLERK,24-APR-16,124
+Kevin Feeney,SH_CLERK,23-MAY-16,124
+Donald OConnell,SH_CLERK,21-JUN-17,124
+
+107 rows selected.
+
+SQL> SELECT first_name || ' ' || last_name AS ename,
+  2         job_id,
+  3         hire_date
+  4  FROM employees
+  5  WHERE last_name IN ('SCOTT', 'TURNER')
+  6  ORDER BY hire_date ASC;
+
+no rows selected
+
+SQL> SELECT first_name || ' ' || last_name AS ename,
+  2         department_id
+  3  FROM employees
+  4  WHERE department_id IN (20, 30)
+  5  ORDER BY ename;
+
+ENAME                                          DEPARTMENT_ID
+---------------------------------------------- -------------
+Alexander Khoo                                            30
+Den Li                                                    30
+Guy Himuro                                                30
+Karen Colmenares                                          30
+Michael Martinez                                          20
+Pat Davis                                                 20
+Shelli Baida                                              30
+Sigal Tobias                                              30
+
+8 rows selected.
+
+SQL> SELECT last_name AS "Employee",
+  2         salary AS "Monthly Salary"
+  3  FROM employees
+  4  WHERE salary BETWEEN 2000 AND 3000
+  5    AND department_id IN (20, 30);
+
+Employee                  Monthly Salary
+------------------------- --------------
+Baida                               2900
+Tobias                              2800
+Himuro                              2600
+Colmenares                          2500
+
+SQL> SELECT last_name,
+  2         hire_date
+  3  FROM employees
+  4  WHERE EXTRACT(YEAR FROM hire_date) = 1981;
+
+no rows selected
+
+SQL> ACCEPT amt NUMBER PROMPT 'Enter Salary: '
+Enter Salary:
+SQL> SELECT first_name || ' ' || last_name AS ename,
+  2         salary
+  3  FROM employees
+  4  WHERE salary > &amt;
+old   4: WHERE salary > &amt
+new   4: WHERE salary >          0
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Douglas Grant                                        2600
+Jennifer Whalen                                      4400
+Michael Martinez                                    13000
+Pat Davis                                            6000
+Susan Jacobs                                         6500
+Hermann Brown                                       10000
+Shelley Higgins                                     12008
+William Gietz                                        8300
+Steven King                                         24000
+Neena Yang                                          17000
+Lex Garcia                                          17000
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Alexander James                                      9000
+Bruce Miller                                         6000
+David Williams                                       4800
+Valli Jackson                                        4800
+Diana Nguyen                                         4200
+Nancy Gruenberg                                     12008
+Daniel Faviet                                        9000
+John Chen                                            8200
+Ismael Sciarra                                       7700
+Jose Manuel Urman                                    7800
+Luis Popp                                            6900
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Den Li                                              11000
+Alexander Khoo                                       3100
+Shelli Baida                                         2900
+Sigal Tobias                                         2800
+Guy Himuro                                           2600
+Karen Colmenares                                     2500
+Matthew Weiss                                        8000
+Adam Fripp                                           8200
+Payam Kaufling                                       7900
+Shanta Vollman                                       6500
+Kevin Mourgos                                        5800
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Julia Nayer                                          3200
+Irene Mikkilineni                                    2700
+James Landry                                         2400
+Steven Markle                                        2200
+Laura Bissot                                         3300
+Mozhe Atkinson                                       2800
+James Marlow                                         2500
+TJ Olson                                             2100
+Jason Mallin                                         3300
+Michael Rogers                                       2900
+Ki Gee                                               2400
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Hazel Philtanker                                     2200
+Renske Ladwig                                        3600
+Stephen Stiles                                       3200
+John Seo                                             2700
+Joshua Patel                                         2500
+Trenna Rajs                                          3500
+Curtis Davies                                        3100
+Randall Matos                                        2600
+Peter Vargas                                         2500
+John Singh                                          14000
+Karen Partners                                      13500
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Alberto Errazuriz                                   12000
+Gerald Cambrault                                    11000
+Eleni Zlotkey                                       10500
+Sean Tucker                                         10000
+David Bernstein                                      9500
+Peter Hall                                           9000
+Christopher Olsen                                    8000
+Nanette Cambrault                                    7500
+Oliver Tuvault                                       7000
+Janette King                                        10000
+Patrick Sully                                        9500
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Allan McEwen                                         9000
+Lindsey Smith                                        8000
+Louise Doran                                         7500
+Sarath Sewall                                        7000
+Clara Vishney                                       10500
+Danielle Greene                                      9500
+Mattea Marvins                                       7200
+David Lee                                            6800
+Sundar Ande                                          6400
+Amit Banda                                           6200
+Lisa Ozer                                           11500
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Harrison Bloom                                      10000
+Tayler Fox                                           9600
+William Smith                                        7400
+Elizabeth Bates                                      7300
+Sundita Kumar                                        6100
+Ellen Abel                                          11000
+Alyssa Hutton                                        8800
+Jonathon Taylor                                      8600
+Jack Livingston                                      8400
+Kimberely Grant                                      7000
+Charles Johnson                                      6200
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Winston Taylor                                       3200
+Jean Fleaur                                          3100
+Martha Sullivan                                      2500
+Girard Geoni                                         2800
+Nandita Sarchand                                     4200
+Alexis Bull                                          4100
+Julia Dellinger                                      3400
+Anthony Cabrio                                       3000
+Kelly Chung                                          3800
+Jennifer Dilly                                       3600
+Timothy Venzl                                        2900
+
+ENAME                                              SALARY
+---------------------------------------------- ----------
+Randall Perkins                                      2500
+Sarah Bell                                           4000
+Britney Everett                                      3900
+Samuel McLeod                                        3200
+Vance Jones                                          2800
+Alana Walsh                                          3100
+Kevin Feeney                                         3000
+Donald OConnell                                      2600
+
+107 rows selected.
