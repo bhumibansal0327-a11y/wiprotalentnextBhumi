@@ -625,3 +625,123 @@ Kevin Feeney                                         3000
 Donald OConnell                                      2600
 
 107 rows selected.
+
+SQL> SELECT e.last_name,
+  2         j.job_title
+  3  FROM employees e
+  4  JOIN jobs j
+  5  ON e.job_id = j.job_id
+  6  WHERE e.manager_id IS NULL;
+
+LAST_NAME                 JOB_TITLE
+------------------------- -----------------------------------
+King                      President
+
+SQL> ACCEPT mgr NUMBER PROMPT 'Enter Manager ID: '
+Enter Manager ID: ACCEPT col CHAR PROMPT 'Enter column (EMPLOYEE_ID, LAST_NAME, SALARY, DEPARTMENT_ID): '
+SP2-0425: "ACCEPT col CHAR PROMPT 'Enter column (EMPLOYEE_ID, LAST_NAME, SALARY, DEPARTMENT_ID): '" is not a valid NUMBER
+Enter Manager ID:
+SQL> SELECT employee_id,
+  2         last_name,
+  3         salary,
+  4         department_id
+  5  FROM employees
+  6  WHERE manager_id = &mgr
+  7  ORDER BY &col;
+old   6: WHERE manager_id = &mgr
+new   6: WHERE manager_id =          0
+Enter value for col: 2
+old   7: ORDER BY &col
+new   7: ORDER BY 2
+
+no rows selected
+
+SQL> ACCEPT mgr NUMBER PROMPT 'Enter Manager ID: '
+Enter Manager ID: ACCEPT col CHAR PROMPT 'Enter column (EMPLOYEE_ID, LAST_NAME, SALARY, DEPARTMENT_ID): '
+SP2-0425: "ACCEPT col CHAR PROMPT 'Enter column (EMPLOYEE_ID, LAST_NAME, SALARY, DEPARTMENT_ID): '" is not a valid NUMBER
+Enter Manager ID:
+SQL> SELECT employee_id,
+  2         last_name,
+  3         salary,
+  4         department_id
+  5  FROM employees
+  6  WHERE manager_id = &mgr
+  7  ORDER BY &col;
+old   6: WHERE manager_id = &mgr
+new   6: WHERE manager_id =          0
+Enter value for col: 5
+old   7: ORDER BY &col
+new   7: ORDER BY 5
+ORDER BY 5
+         *
+ERROR at line 7:
+ORA-01785: ORDER BY item must be the number of a SELECT-list expression
+
+
+SQL> ACCEPT mgr NUMBER PROMPT 'Enter Manager ID: '
+Enter Manager ID: ACCEPT col CHAR PROMPT 'Enter column (EMPLOYEE_ID, LAST_NAME, SALARY, DEPARTMENT_ID): '
+SP2-0425: "ACCEPT col CHAR PROMPT 'Enter column (EMPLOYEE_ID, LAST_NAME, SALARY, DEPARTMENT_ID): '" is not a valid NUMBER
+Enter Manager ID:
+SQL> SELECT employee_id,
+  2         last_name,
+  3         salary,
+  4         department_id
+  5  FROM employees
+  6  WHERE manager_id = &mgr
+  7  ORDER BY &col;
+old   6: WHERE manager_id = &mgr
+new   6: WHERE manager_id =          0
+Enter value for col: 2
+old   7: ORDER BY &col
+new   7: ORDER BY 2
+
+no rows selected
+
+SQL> SELECT last_name
+  2  FROM employees
+  3  WHERE last_name LIKE '__A%';
+
+no rows selected
+
+SQL> SELECT last_name
+  2  FROM employees
+  3  WHERE UPPER(last_name) LIKE '%A%'
+  4    AND UPPER(last_name) LIKE '%S%';
+
+LAST_NAME
+-------------------------
+Atkinson
+Bates
+Colmenares
+Davies
+Davis
+Jackson
+Jacobs
+James
+Marvins
+Matos
+Partners
+
+LAST_NAME
+-------------------------
+Rajs
+Sarchand
+Sciarra
+Sewall
+Sullivan
+Tobias
+Vargas
+Walsh
+Williams
+
+20 rows selected.
+
+SQL> SELECT first_name || ' ' || last_name AS ename,
+  2         job_id,
+  3         salary
+  4  FROM employees
+  5  WHERE job_id = 'PU_CLERK'
+  6    AND salary IN (800, 950, 1300);
+
+no rows selected
+
